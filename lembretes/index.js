@@ -9,13 +9,13 @@ app.get (`/lembretes`, (req, res) => {
     res.send(lembretes)
 })
 app.put (`/lembretes`, (req, res) => {
-    contador++
+    contador++ //contador = contador +1
     const { texto } = req.body
     lembretes[contador] = {
         contador, texto
     }
     res.status(201).send(lembretes[contador])
 })
-app.listen (5000, () => {
-    console.log(`Lembretes. Porta 5000`)
+app.listen (4000, () => {
+    console.log(`Lembretes. Porta 4000`)
 })
