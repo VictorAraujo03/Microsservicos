@@ -8,7 +8,7 @@ contador = 0
 app.get (`/lembretes`, (req, res) => {
     res.send(lembretes)
 })
-app.put (`/lembretes`, (req, res) => {
+app.post (`/lembretes`, (req, res) => {
     contador++ //contador = contador +1
     const { texto } = req.body
     lembretes[contador] = {

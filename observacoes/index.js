@@ -8,7 +8,7 @@ const observacoesPorLembreteId = {}
 
 const { v4: uuidv4 } = require('uuid');
 
-app.put('/lembretes/:id/observacoes', (req,res) => {
+app.post('/lembretes/:id/observacoes', (req,res) => {
     const idObs = uuidv4()
     const {texto} = req.body
     const observacoesDoLembrete = observacoesPorLembreteId[req.id] || []
