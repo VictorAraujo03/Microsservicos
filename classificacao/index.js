@@ -1,7 +1,8 @@
-const express = require('express');
-const app = express();
-app.use(express.json());
-const palavraChave = "importante";
+const express = require('express')
+const axios = require('axios')
+const app = express()
+app.use(express.json())
+const palavraChave = "importante"
 const funcoes = {
     ObservacaoCriada: (observacao) => {
         oberservacao.status = observacao.texto.includes(palavraChave) ? "importante" : "comum"
